@@ -1,0 +1,12 @@
+#Command untuk installasi :
+sudo apt update 
+sudo apt install subfinder
+sudo apt install httpx-toolkit
+sudo apt install golang-go
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+cp /root/go/bin/nuclei /usr/bin/
+
+#command penggunaan
+subfinder -d target.com -o subdomains.txt
+httpx-toolkit -l subdomains.txt -o active.txt
+nuclei -l active.txt -severity low,medium,high,critical -ept ssl -o hasilnuclei.txt
