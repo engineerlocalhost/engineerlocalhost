@@ -1,0 +1,15 @@
+#Requirement
+- Linux
+- Docker-Compose
+- OnlyOffice
+
+
+--------------
+1. Install Docker Compose
+    apt install docker-compose -y
+2. Clone the GitHub repository
+    git clone https://github.com/ONLYOFFICE/Docker-CommunityServer
+3. Install ONLYOFFICE Workspace
+    cd Docker-CommunityServer
+    docker-compose -f docker-compose.workspace_enterprise.yml up -d
+    docker-compose -f docker-compose.groups.yml up -d
